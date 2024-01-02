@@ -1,0 +1,8 @@
+[Unit]
+Description=firstboot-Service
+Before=rcS.service
+[Service]
+Type=forking
+ExecStart=/usr/lib/systemd/system/firstboot.sh start
+[Install]
+WantedBy=multi-user.target
